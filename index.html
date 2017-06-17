@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Form</title>
+</head>
+<body>
+    <header>
+        <h1>Question Form</h1>
+        <nav>
+            <a href="second-page.html">Second page</a>
+        </nav>
+        <br>
+    </header>
+    <main>
+        <form action="https://formspree.io/nazarun@gmail.com" method="POST" >
+            <fieldset>
+                <legend>Personal information</legend>
+                    <label>Your Name:
+                        <input type="text" name="name" required autofocus>
+                    </label>
+                    <br>
+                    <label>Your email:
+                        <input type="email" name="email" required>
+                    </label>
+                    <br>
+                    <label>Age:
+                        <input type="number" name="age" required>
+                    </label>
+                    <br>
+                    <label>Phone number:
+                        <input type="text" name="phone-number" required pattern="\+380[0-9]{9}" title="+380123456789" placeholder="+380123456789">
+                    </label>
+                    <br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                    <br>
+                    <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    <br>
+            </fieldset>
+            <br>
+            
+            <p>How often do you visit cafes?</p>
+            <label>
+                <input type="radio" name="often" value="Daily">Daily
+            </label><br>
+            <label>
+                <input type="radio" name="often" value="Several times per week">Several times per week
+            </label><br>
+            <label>
+                <input type="radio" name="often" value="Weekly">Weekly
+            </label><br>
+            <label>
+                <input type="radio" name="often" value="Monthly">Monthly
+            </label>
+            <br>
+            <br>
+            
+            <label>How many cups of coffe do you drink per day?
+                <select name="quantity" >
+                    <option value="None">None</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </label>
+            <br>
+            
+            <label>What kind of coffe do you prefer?
+                <select name="kind">
+                    <option>Americano</option>
+                    <option>Espresso</option>
+                    <option>Ristretto</option>
+                    <option>Cappucino</option>
+                    <option>Cafe Latte</option>
+                </select>
+            </label>
+            <br>
+            
+            <!--Type Datalist-->
+            <label>What kinds of fluid do you buy?
+            <input list="products">
+                <datalist id="products">
+                    <option>Coffe</option>
+                    <option>Tea</option>
+                    <option>Juice</option>
+                    <option>Alchohol</option>
+                </datalist>
+            </label>    
+            <br>
+            
+            <p>Do you prefer large, national chain coffee shops or small, privately owned coffee shops?</p>
+            <label>
+                <input type="radio" name="type-of-shop" value="large">Large
+            </label>
+            <label>
+                <input type="radio" name="type-of-shop" value="small">Small
+            </label>
+            <br>
+            <textarea rows="5" cols="100" name="explanation">Please explain why</textarea><br>
+            
+            <label>What is your favourite cafe?
+                <input type="text" name="favourite-cafe" required>
+            </label>
+            
+            <p> How do you feel about Starbucks? (choose one or more )</p>
+            <input type="checkbox" id="bad" name="starbucks" value="bad-coffee">
+                <label for="bad">It’s hard to link with coffee</label><br>
+            <input type="checkbox" id="friendly" name="starbucks" value="friendly">
+                <label for="friendly">Fiendly</label><br>
+            <input type="checkbox" id="creative" name="starbucks" value="creative">
+                <label for="creative">Creative</label><br>
+            <input type="checkbox" id="environment-safely" name="starbucks" value="environment-safely">
+                <label for="environment-safely">Environment Safely</label><br>
+            <input type="checkbox" id="comfortable" name="starbucks" value="comfortable">
+                <label for="comfortable">Comfortable</label><br>
+            <input type="checkbox" id="artistic" name="starbucks" value="artistic">
+                <label for="artistic">Artistic</label><br>
+            <input type="checkbox" id="feminine" name="starbucks" value="feminine">
+                <label for="feminine">Feminine</label><br>
+            
+            <!--Buttons-->
+            <input type="submit" value="SEND">
+            <input type="reset">
+        </form>
+    </main>
+</body>
+</html>
